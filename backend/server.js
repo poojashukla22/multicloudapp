@@ -1,4 +1,4 @@
-/*const express = require('express');
+/*1const express = require('express');
 const app = express();
 
 app.get('/hello', (req, res) => {
@@ -11,7 +11,7 @@ app.get('/hello', (req, res) => {
 app.listen(3000, () => {
   console.log("Backend running on port 3000");
 });*/
-const express = require('express');
+/*2const express = require('express');
 const app = express();
 
 app.use(require('cors')());
@@ -25,4 +25,15 @@ app.get('/hello', (req, res) => {
 
 app.listen(3000, () => {
   console.log("Backend running on port 3000");
+});*/
+app.get('/hello', (req, res) => {
+  const start = Date.now();
+
+  const response = {
+    message: "Hello from backend",
+    time: new Date(),
+    responseTimeMs: Date.now() - start
+  };
+
+  res.json(response);
 });
